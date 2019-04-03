@@ -1,0 +1,54 @@
+.blog {
+
+    .hero {
+        height: 50vh;
+        @include flex-center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+
+        .most-recent {
+            color: white;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .entry-title>a {
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+
+        }
+    }
+}
+
+.site-main {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100vw;
+    margin: 0 auto;
+
+    section.posts {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        padding: 0rem 3rem;
+        text-align: center;
+
+        article {
+            padding: 2rem;
+
+            .entry-header {
+                padding-bottom: 2rem;
+            }
+
+            div.entry-image {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
