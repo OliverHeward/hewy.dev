@@ -70,7 +70,7 @@ get_header(); ?>
 					<?php }?>
 					<!-- End of WordPress Loop --> 
 				<!-- Echo Button --> 
-				<?php echo '<a class="black-btn" href="'.get_the_permalink().'">View More</a>'; ?>
+				<?php echo '<a class="black-btn" href="'. get_permalink( get_page_by_path( 'blog' ) ) . '">View More</a>'; ?>
 			</section>
 			<!-- End of Blog Section -->
 			<section class="experience">

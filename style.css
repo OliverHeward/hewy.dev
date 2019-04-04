@@ -803,7 +803,7 @@ object {
   height: 50px;
   width: 100%;
   position: fixed;
-  margin-top: -7.5rem; }
+  top: 0; }
   .site-header .site-branding {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -909,7 +909,7 @@ object {
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
         .site-header .site-branding .collapse-menu #menu .slidebar-menu {
-          margin-top: 8rem;
+          margin-top: 6rem;
           padding: 0rem 2rem;
           width: 95%; }
           .site-header .site-branding .collapse-menu #menu .slidebar-menu li {
@@ -953,6 +953,12 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+section {
+  margin-top: 2rem; }
+
+#wpadminbar {
+  display: none; }
+
 /* Front page */
 .home #wpadminbar {
   display: none; }
@@ -1151,8 +1157,7 @@ object {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 2rem 1rem; }
+          flex-direction: column; }
   .home section.project-grid .entry-title {
     font-size: 2rem; }
   .home section.project-grid ul {
@@ -1192,7 +1197,7 @@ object {
                 text-decoration: line-through #d2ab74; }
 
 .page-id-7 header > .entry-title,
-.page-id-15 header > .entry-title,
+.page-id-9 header > .entry-title,
 .page-id-11 header > .entry-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1202,10 +1207,10 @@ object {
           justify-content: center;
   -ms-flex-item-align: center;
       align-self: center;
-  font-size: 3.5rem; }
+  font-size: 3rem; }
 
 .page-id-7 header > .entry-title,
-.page-id-15 header > .entry-title {
+.page-id-9 header > .entry-title {
   margin: 5rem; }
 
 .follow-me {
@@ -1246,6 +1251,12 @@ object {
     margin: 0 auto;
     text-align: center; }
 
+/* Contact Page */
+.page-id-9 .site-content .entry-content {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+
 .blog .hero {
   height: 50vh;
   display: -webkit-box;
@@ -1273,7 +1284,7 @@ object {
     font-size: 2rem;
     text-decoration: none; }
 
-.site-main {
+.blog .site-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1283,16 +1294,34 @@ object {
           flex-flow: row wrap;
   width: 100vw;
   margin: 0 auto; }
-  .site-main section.posts {
+  .blog .site-main section.posts {
     margin-top: 1rem;
     margin-bottom: 3rem;
     padding: 0rem 3rem;
     text-align: center; }
-    .site-main section.posts article {
-      padding: 2rem; }
-      .site-main section.posts article .entry-header {
-        padding-bottom: 2rem; }
-      .site-main section.posts article div.entry-image {
+    .blog .site-main section.posts article {
+      padding-bottom: 4rem;
+      border-bottom: 1px solid #404040; }
+      .blog .site-main section.posts article .entry-header {
+        padding-bottom: 2rem;
+        margin-top: 3rem; }
+      .blog .site-main section.posts article div.entry-image {
         max-width: 100%; }
-  .site-main .sidebar {
+      .blog .site-main section.posts article .entry-content {
+        margin-bottom: 2.5rem; }
+    .blog .site-main section.posts .black-btn {
+      color: #404040; }
+      .blog .site-main section.posts .black-btn:hover, .blog .site-main section.posts .black-btn:focus, .blog .site-main section.posts .black-btn:active {
+        color: #fff; }
+  .blog .site-main .sidebar {
     display: none; }
+
+.single-post .site-content {
+  margin-left: auto;
+  margin-right: auto; }
+  .single-post .site-content .entry-header {
+    text-align: center; }
+  .single-post .site-content .entry-content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }

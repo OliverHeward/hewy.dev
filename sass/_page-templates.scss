@@ -2,6 +2,12 @@
 # Page Templates
 --------------------------------------------------------------*/
 
+section {
+    margin-top: 2rem;
+}
+    #wpadminbar {
+        display: none;
+    }
 /* Front page */
 .home {
 	#wpadminbar {
@@ -202,7 +208,6 @@
     section.project-grid {
         @include flex-center;
         flex-direction: column;
-        padding: 2rem 1rem;
 
         .entry-title {
             font-size: 2rem;
@@ -247,20 +252,20 @@
 }
 
 .page-id-7,
-.page-id-15,
+.page-id-9,
 .page-id-11 {
     header {
         &>.entry-title {
             display: flex;
             justify-content: center;
             align-self: center;
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
     }
 }
 
 .page-id-7,
-.page-id-15, {
+.page-id-9, {
     header {
         &>.entry-title {
             margin: 5rem;
@@ -306,6 +311,18 @@
             max-width: 550px;
             margin: 0 auto;
             text-align: center;
+        }
+    }
+}
+
+/* Contact Page */
+
+.page-id-9 {
+    .site-content {
+
+        .entry-content {
+            width: 80%;
+            @include margin-center;
         }
     }
 }
