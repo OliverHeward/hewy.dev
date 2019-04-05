@@ -80,6 +80,14 @@ get_header(); ?>
 			<div class="sidebar">
 				<!-- Calling WordPress Sidebar -->
 			<?php get_sidebar(); ?>
+
+			<h2 class="archive-title">Archive</h2>
+			<div class="archive-dropdown">
+					<button class="archive-btn">Select Month <i class="fas fa-chevron-down"></i></button>
+					<ul class="archive-content">
+						<?php wp_get_archives('type=monthly'); ?>
+					</ul>
+				</div>
 			</div>
 			<!-- End of Sidebar -->
 		</main>

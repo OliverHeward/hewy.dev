@@ -1,0 +1,24 @@
+.site-footer {
+    @include flex-center;
+    width: 100vw;
+    background: $color__text-main;
+    text-align: center;
+    padding: 2rem 0 3rem;
+
+    .site-info {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        color: white;
+
+        p {
+        	margin: .5rem;
+
+        	&:hover,
+        	&:active,
+        	&:focus {
+        		color: $color__link;
+        	}
+        }
+    }
+}

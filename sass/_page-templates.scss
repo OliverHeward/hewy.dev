@@ -10,9 +10,7 @@ section {
     }
 /* Front page */
 .home {
-	#wpadminbar {
-		display: none;
-	}
+
 
     .site-content {
         @include margin-center;
@@ -45,12 +43,29 @@ section {
                 background: url('../../assets/images/me.jpg');
                 background-size: cover;
                 background-position: center;
+
+                @include tablet {
+                    height: 200px;
+                    width: 200px;
+                    border-radius: 200px;
+                }
+
+                @include desktop {
+                    height: 250px;
+                    width: 250px;
+                    border-radius: 250px;
+                }
             }
 
             .entry-title {
                 font-size: 1.5rem;
                 width: 70%;
                 text-align: center;
+
+                @include desktop {
+                    font-size: 2rem;
+                    max-width: 650px;
+                }
             }
 
             .black-btn {
@@ -91,7 +106,6 @@ section {
                     width: 25%;
                     height: inherit;
                     flex-direction: column;
-                    border-top: 1px solid #f3f3f3;
 
                     span.blog-day {
                         font-size: 1rem;
@@ -99,7 +113,7 @@ section {
                     }
 
                     span.blog-month {
-                        font-size: .7rem;
+                        font-size: 1rem;
                     }
                 }
 
@@ -112,7 +126,11 @@ section {
 
                     .entry-title>a {
                         text-decoration: none;
-                        color: $color__link;
+                        color: $color__text-main;
+
+                        &:hover {
+                            color: $color__link;
+                        }
                     }
                 }
             }
@@ -136,6 +154,18 @@ section {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 0px;
+
+            @include tablet {
+                grid-template-columns: repeat(2,1fr);
+                width: 90%;
+                @include margin-center;
+            }
+
+            @include desktop {
+                grid-template-columns: repeat(2,1fr);
+                max-width: 750px;
+                @include margin-center;
+            }
 
             .container-skillbar {
                 width: 80%;
@@ -208,6 +238,7 @@ section {
     section.project-grid {
         @include flex-center;
         flex-direction: column;
+        margin-top: 3rem;
 
         .entry-title {
             font-size: 2rem;
@@ -223,6 +254,12 @@ section {
             padding-left: 0;
             width: 100vw;
             margin-bottom: 20px;
+
+            @include desktop {
+                grid-template-columns: repeat(2,1fr);
+                @include margin-center;
+                max-width: 900px;
+            }
 
             li {
                 line-height: 1;
@@ -323,6 +360,12 @@ section {
         .entry-content {
             width: 80%;
             @include margin-center;
+        }
+
+        .follow-me {
+            h2 {
+                text-align: center;
+            }
         }
     }
 }

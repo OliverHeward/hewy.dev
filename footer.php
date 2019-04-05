@@ -11,7 +11,9 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
-					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
+					<h2 class="stay-updated">Contact Info</h2>
+						<i class="fas fa-envelope"></i> <p>Oliver@hewy.dev</p>
+						<i class="fas fa-phone"></i> <p>07773 690762</p>
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

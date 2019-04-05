@@ -18,7 +18,10 @@
             color: white;
             font-size: 2rem;
             text-decoration: none;
+        }
 
+        .white-btn {
+            margin-top: .5rem;
         }
     }
 
@@ -28,15 +31,23 @@
         width: 100vw;
         margin: 0 auto;
 
+        @include desktop {
+            max-width: 1000px;
+        }
+
         section.posts {
             margin-top: 1rem;
             margin-bottom: 3rem;
             padding: 0rem 3rem;
             text-align: center;
 
+            @include desktop {
+                width: 73%;
+            }
+
             article {
                 padding-bottom: 4rem;
-                border-bottom: 1px solid $color__text-main;
+                border-bottom: 1px solid #f3f3f3;
 
                 .entry-header {
                     padding-bottom: 2rem;
@@ -65,6 +76,86 @@
 
         .sidebar {
             display: none;
+
+            @include desktop {
+                display: block;
+                width: 27%;
+                padding-top: 3rem;
+            }
+
+            .widget-title {
+                text-align: center;
+            }
+
+            .wp-block-image {
+                img {
+                    border-radius: 50%;
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+
+            .archive-title {
+                text-align: center;
+                color: $color__text-main;
+            }
+
+            .archive-dropdown {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 4rem;
+                @include flex-center;
+
+                &:hover {
+                    .archive-content {
+                        display: block;
+                    }
+                }
+                .archive-btn {
+                    background: transparent;
+                    border: 1px solid $color__text-main;
+                    padding: .5rem 3rem;
+                    color: $color__text-main;
+                    cursor: pointer;
+                    font-size: 1rem;
+                    width: 250px;
+
+                    i {
+                        font-size: 1rem;
+                        float: right;
+                        position: absolute;
+                        right: 0;
+                        padding-right: 1rem;
+                    }
+
+                }
+                .archive-content {
+                    display: none;
+                    position: absolute;
+                    color: $color__text-main;
+                    z-index: 1;
+                    min-width: 250px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    margin: 0;
+                    margin-top: 2.2rem;
+                    padding: 0;
+                    list-style: none;
+
+                    li>a {
+                        color: $color__text-main;
+                        text-align: center;
+                        padding: .5rem 16px;
+                        font-size: 1rem;
+                        text-decoration: none;
+                        display: block;
+
+                        &:hover {
+                            background-color: $color__text-main;
+                            color: $color__link;
+                        }
+                    }
+                }
+            }
         }
     }
 }

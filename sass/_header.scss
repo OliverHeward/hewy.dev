@@ -118,13 +118,13 @@
                 transform: translate(-100%);
                 transition: transform .5s cubic-bezier(.77, .2, .05, 1);
 
-                // @include tablet {
-                //     width: 46%;
-                // }
+                @include tablet {
+                    width: 46%;
+                }
 
-                // @include desktop {
-                //     width: 26%;
-                // }
+                @include desktop {
+                    width: 26%;
+                }
 
 
                 .slidebar-menu {

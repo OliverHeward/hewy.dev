@@ -30,7 +30,7 @@ get_header(); ?>
 				<div class="me">
 				</div>
 				<h1 class="entry-title">Hi, my name is Oliver. I am a Web Developer and blogger.</h1>
-				<a class="black-btn">More about me</a>
+				<a class="black-btn" href="<?php echo get_permalink( get_page_by_path( 'about' ) ); ?>">More about me</a>
 			</section>
 			<!-- End of Hero Section -->
 
@@ -121,7 +121,7 @@ get_header(); ?>
 						</div> <!-- Ende Skill Bar -->
 
 						<div class="skillbar clearfix " data-percent="75%">
-							<div class="skillbar-title"><span style="color: #00749c;">WordPress</span></div>
+							<div class="skillbar-title"><span style="color: #00749c;">WP</span></div>
 							<div class="skillbar-bar"></div>
 							<div class="skill-bar-percent">75%</div>
 						</div> <!-- Ende Skill Bar -->

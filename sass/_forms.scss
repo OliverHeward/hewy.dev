@@ -21,10 +21,11 @@ input[type="submit"] {
     text-transform: uppercase;
 }
 
-.black-btn, #black-btn {
+.black-btn,
+#black-btn {
     @extend .btn;
     background-color: transparent;
-    border: 2px solid black;
+    border: 2px solid $color__text-main;
     color: #3a3a3a;
     margin-bottom: 3rem;
     margin-top: 3rem;
@@ -32,9 +33,9 @@ input[type="submit"] {
     &:hover,
     &:active,
     &:focus {
-        background: #3a3a3a;
+        background: $color__text-main;
         color: white;
-        border: 2px solid #3a3a3a;
+        border: 2px solid $color__text-main;
     }
 }
 
@@ -56,30 +57,143 @@ input[type="submit"] {
 
 /* Fields */
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
-    color: #666;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+#contact {
+    padding: 0rem 2rem 2rem;
 
-    &:focus {
-        color: #111;
+    h3 {
+        color: $color__text-main;
+        display: inline-block;
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 0;
+    }
+
+    fieldset {
+        border: medium none !important;
+        padding: 0;
+        width: 100%;
+        display: flex;
+
+        &>button {
+            margin: 2rem auto;
+        }
     }
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-    padding: 3px;
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="url"],
+#contact textarea {
+    width: 100%;
+    border: 1px solid $color__text-main;
+    background: #FFF;
+    margin: 1rem 0 1rem;
+    padding: 10px;
+
+    @include tablet {
+        width: 90%;
+        @include margin-center;
+    }
+
 }
 
-textarea {
-    padding-left: 3px;
+.input-top-container {
+
+    @include desktop {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    @include margin-center;
+
+    }
+    fieldset {
+        input[type="text"],
+        input[type="email"],
+        input[type="url"] {
+            @include desktop {
+                width: 45%;
+            }
+        }
+    }
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid $color__link;
+}
+
+
+#contact textarea {
+    height: 150px;
+    max-width: 100%;
+    resize: none;
+
+    @include tablet {
+        height: 200px;
+    }
+
+    @include desktop {
+        max-width: 1000px;
+        @include margin-center;
+        height: 300px;
+    }
+}
+
+#contact button[type="submit"]:hover {
+    background: $color__text-main;
+    color: $color__link;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+
+    &:active,
+    &:active,
+    &:hover,
+    &:hover {
+        outline: 0;
+        border: 1px solid $color__link;
+    }
+}
+
+::-webkit-input-placeholder {
+    color: #888;
+}
+
+:-moz-placeholder {
+    color: #888;
+}
+
+::-moz-placeholder {
+    color: #888;
+}
+
+:-ms-input-placeholder {
+    color: #888;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: #ff9966;
+    text-align: center;
+    font-weight: bold;
+    font-size: .9rem;
 }
