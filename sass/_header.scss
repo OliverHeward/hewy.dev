@@ -4,7 +4,7 @@
     background-color: white;
     border-bottom: 1px solid #e1e1e1;
     height: 50px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
 
@@ -43,7 +43,6 @@
                 span {
                     display: block;
                     width: 35px;
-                    opacity: .8;
                     height: 5px;
                     margin-bottom: 5px;
                     position: relative;
@@ -175,11 +174,31 @@
 
         .logo {
         	margin: 0 auto;
-        	padding-right: 1rem;
+        	padding-right: 2rem;
         	font-weight: 400;
+
+            @include tablet {
+                padding-right: 2rem;
+            }
+
+            @include desktop {
+                padding-right: 0;
+                padding-left: 4rem;
+            }
         }
         .header-social {
         	display: none;
+
+            @include desktop {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100px;
+                padding-right: 1rem;
+            }
+
+            a {
+                color: $color__text-main;
+            }
         }
     }
 }

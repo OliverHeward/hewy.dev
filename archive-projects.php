@@ -27,10 +27,10 @@ get_header(); ?>
 					'post_status' => 'publish',
 				));
 			foreach ($posts_array as $post) { ?>
-			<!-- Start of WordPress Loop --> 
+			<!-- Start of WordPress Loop -->
 			<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 					<div class="project-grid-item" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(0, 0, 0, 0.4) 100%), #969696 url('<?php echo $thumb['0'];?>'); background-size: cover; background-position: center;">
-						<a href="<?php echo get_the_permalink(); ?>" class="wrapper">
+						<a href="<?php echo get_the_permalink(); ?>">
 					<!-- PHP Conditional checking and pulling Post Thumbnail -->
 					<!-- End of PHP Conditional -->
 
@@ -41,16 +41,15 @@ get_header(); ?>
                 		</div>
                 		<!-- ENd of Project Info -->
 					<!-- End of Grid Wrapper -->
-					</a>
 					</div>
 				<!-- End of Grid Item -->
         	<?php } ?>
+        	</a>
         	<?php else: ?>
         	<?php endif;?>
         	<!-- End of Loop & Conditional -->
     	</div>
     	<!-- End of Project Grid -->
-
 	</main>
 	<!-- End of Main -->
 </div>

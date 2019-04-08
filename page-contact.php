@@ -53,11 +53,16 @@ get_header(); ?>
 		<div class="follow-me">
 			<h2>Follow Me</h2>
 			<div class="social-icons">
-				<i class="fab fa-linkedin-in"></i> 
-				<i class="fab fa-github"></i>
-				<i class="fab fa-twitter"></i>
-				<i class="fab fa-instagram"></i>
-				<i class="fab fa-spotify"></i>
+				<a href="https://www.linkedin.com/in/oliver-heward">
+					<i class="fab fa-linkedin-in"></i> </a>
+				<a href="https://github.com/OliverHeward">
+					<i class="fab fa-github"></i> </a>
+				<a href="https://twitter.com/HewardOliver">
+					<i class="fab fa-twitter"></i></a>
+				<a href="https://www.instagram.com/hewy.dev">
+					<i class="fab fa-instagram"></i></a>
+				<a href="">
+					<i class="fab fa-spotify"></i> </a>
 			</div>
 		</div>
 		<!-- End of Follow Me / Social Icon Area -->

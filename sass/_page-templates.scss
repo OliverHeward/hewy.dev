@@ -5,13 +5,17 @@
 section {
     margin-top: 2rem;
 }
-    #wpadminbar {
-        display: none;
-    }
+
+#wpadminbar {
+    display: none;
+}
+
+.site-content {
+    margin-top: 3rem;
+}
+
 /* Front page */
 .home {
-
-
     .site-content {
         @include margin-center;
 
@@ -24,7 +28,7 @@ section {
             @include flex-center;
             flex-flow: column no-wrap;
             width: 100vw;
-            margin-top: 5rem;
+            margin-top: 6rem;
 
             .entry-title {
                 padding: 0;
@@ -156,13 +160,13 @@ section {
             grid-gap: 0px;
 
             @include tablet {
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2, 1fr);
                 width: 90%;
                 @include margin-center;
             }
 
             @include desktop {
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2, 1fr);
                 max-width: 750px;
                 @include margin-center;
             }
@@ -248,7 +252,7 @@ section {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             grid-auto-rows: 2fr;
-            grid-gap: 50px;
+            grid-gap: 20px;
             list-style-type: none;
             margin-left: 0;
             padding-left: 0;
@@ -256,9 +260,9 @@ section {
             margin-bottom: 20px;
 
             @include desktop {
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns: repeat(2, 1fr);
                 @include margin-center;
-                max-width: 900px;
+                max-width: 1000px;
             }
 
             li {
@@ -272,7 +276,9 @@ section {
             .project-wrapper {
                 max-width: 550px;
                 height: 300px;
-                @include flex-center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 color: transparent;
 
                 &:hover,
@@ -282,6 +288,11 @@ section {
                     color: $color__text-main;
                     cursor: pointer;
                     text-decoration: line-through $color__link;
+                    transition: all 1s ease;
+                }
+
+                .project-title {
+                    padding: 0;
                 }
             }
         }
@@ -302,7 +313,8 @@ section {
 }
 
 .page-id-7,
-.page-id-9, {
+.page-id-9,
+    {
     header {
         &>.entry-title {
             margin: 5rem;
@@ -321,15 +333,16 @@ section {
         width: 80%;
         @include margin-center;
 
-        &>i {
-            padding: 1rem 1rem;
-            margin: .8rem .8rem;
-        }
+        a {
+            color: $color__text-main;
+            padding: .8rem 1rem;
+            margin: 1rem;
 
-        .fab:hover {
-            color: white;
-            background-color: #404040;
-            border-radius: 200px;
+            &:hover {
+                background-color: $color__text-main;
+                color: white;
+                border-radius: 100px;
+            }
         }
     }
 }
@@ -339,7 +352,7 @@ section {
 .page-id-7 {
 
     .site-content {
-        padding-top: 3rem;
+        padding-top: 2rem;
         padding-bottom: 3rem;
         @include margin-center;
 

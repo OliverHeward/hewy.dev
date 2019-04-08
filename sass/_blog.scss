@@ -14,10 +14,14 @@
             margin: 0;
         }
 
-        .entry-title>a {
-            color: white;
-            font-size: 2rem;
-            text-decoration: none;
+        .entry-title {
+            width: 85%;
+
+            a {
+                color: white;
+                font-size: 2rem;
+                text-decoration: none;
+            }
         }
 
         .white-btn {
@@ -43,6 +47,8 @@
 
             @include desktop {
                 width: 73%;
+                border-right: 1px solid #f4f4f4;
+                padding: 0rem 5rem;
             }
 
             article {
@@ -81,17 +87,20 @@
                 display: block;
                 width: 27%;
                 padding-top: 3rem;
+                padding-left: 2rem;
             }
 
             .widget-title {
                 text-align: center;
+                margin: 1rem auto;
             }
 
             .wp-block-image {
                 img {
+                    margin: 1rem auto;
                     border-radius: 50%;
-                    width: 250px;
-                    height: 250px;
+                    width: 200px;
+                    height: 200px;
                 }
             }
 
@@ -111,6 +120,7 @@
                         display: block;
                     }
                 }
+
                 .archive-btn {
                     background: transparent;
                     border: 1px solid $color__text-main;
@@ -129,13 +139,14 @@
                     }
 
                 }
+
                 .archive-content {
                     display: none;
                     position: absolute;
                     color: $color__text-main;
                     z-index: 1;
-                    min-width: 250px;
-                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    min-width: 238px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                     margin: 0;
                     margin-top: 2.2rem;
                     padding: 0;
@@ -164,13 +175,39 @@
     .site-content {
         @include margin-center;
 
-        .entry-header {
+        .entry-meta {
             text-align: center;
+            margin: 3rem auto;
+            margin-top: 4rem;
+
+        }
+
+        .entry-header {
+            width: 100vw;
+            height: 350px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+
+            @include tablet {
+                height: 400px;
+            }
+
+            @include desktop {
+                max-width: 1000px;
+                height: 500px;
+            }
         }
 
         .entry-content {
             width: 80%;
             @include margin-center;
+            margin-bottom: 5rem;
+
+            @include desktop {
+                max-width: 650px;
+            }
         }
     }
 }

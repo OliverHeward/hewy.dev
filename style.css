@@ -540,7 +540,9 @@ input[type="submit"] {
     display: -ms-flexbox;
     display: flex; }
     #contact fieldset > button {
-      margin: 2rem auto; }
+      margin: 2rem auto;
+      padding: 1rem 8rem;
+      border: 1px solid #404040; }
 
 #contact input[type="text"],
 #contact input[type="email"],
@@ -885,7 +887,7 @@ object {
   background-color: white;
   border-bottom: 1px solid #e1e1e1;
   height: 50px;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0; }
   .site-header .site-branding {
@@ -934,7 +936,6 @@ object {
         .site-header .site-branding .collapse-menu #menuToggle span {
           display: block;
           width: 35px;
-          opacity: .8;
           height: 5px;
           margin-bottom: 5px;
           position: relative;
@@ -1035,10 +1036,29 @@ object {
                   color: #d2ab74; }
     .site-header .site-branding .logo {
       margin: 0 auto;
-      padding-right: 1rem;
+      padding-right: 2rem;
       font-weight: 400; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .site-header .site-branding .logo {
+          padding-right: 2rem; } }
+      @media (min-width: 1024px) {
+        .site-header .site-branding .logo {
+          padding-right: 0;
+          padding-left: 4rem; } }
     .site-header .site-branding .header-social {
       display: none; }
+      @media (min-width: 1024px) {
+        .site-header .site-branding .header-social {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: space-evenly;
+              -ms-flex-pack: space-evenly;
+                  justify-content: space-evenly;
+          width: 100px;
+          padding-right: 1rem; } }
+      .site-header .site-branding .header-social a {
+        color: #404040; }
 
 .site-footer {
   display: -webkit-box;
@@ -1073,6 +1093,9 @@ section {
 #wpadminbar {
   display: none; }
 
+.site-content {
+  margin-top: 3rem; }
+
 /* Front page */
 .home .site-content {
   margin-left: auto;
@@ -1095,7 +1118,7 @@ section {
         -ms-flex-flow: column no-wrap;
             flex-flow: column no-wrap;
     width: 100vw;
-    margin-top: 5rem; }
+    margin-top: 6rem; }
     .home .site-content section.hero .entry-title {
       padding: 0; }
     .home .site-content section.hero .me,
@@ -1303,7 +1326,7 @@ section {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: 2fr;
-    grid-gap: 50px;
+    grid-gap: 20px;
     list-style-type: none;
     margin-left: 0;
     padding-left: 0;
@@ -1314,7 +1337,7 @@ section {
         grid-template-columns: repeat(2, 1fr);
         margin-left: auto;
         margin-right: auto;
-        max-width: 900px; } }
+        max-width: 1000px; } }
     .home section.project-grid ul li {
       line-height: 1;
       overflow: hidden;
@@ -1339,7 +1362,11 @@ section {
         color: #404040;
         cursor: pointer;
         -webkit-text-decoration: line-through #d2ab74;
-                text-decoration: line-through #d2ab74; }
+                text-decoration: line-through #d2ab74;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease; }
+      .home section.project-grid ul .project-wrapper .project-title {
+        padding: 0; }
 
 .page-id-7 header > .entry-title,
 .page-id-9 header > .entry-title,
@@ -1376,17 +1403,18 @@ section {
     width: 80%;
     margin-left: auto;
     margin-right: auto; }
-    .follow-me .social-icons > i {
-      padding: 1rem 1rem;
-      margin: .8rem .8rem; }
-    .follow-me .social-icons .fab:hover {
-      color: white;
-      background-color: #404040;
-      border-radius: 200px; }
+    .follow-me .social-icons a {
+      color: #404040;
+      padding: .8rem 1rem;
+      margin: 1rem; }
+      .follow-me .social-icons a:hover {
+        background-color: #404040;
+        color: white;
+        border-radius: 100px; }
 
 /* About Page */
 .page-id-7 .site-content {
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-bottom: 3rem;
   margin-left: auto;
   margin-right: auto; }
@@ -1427,10 +1455,12 @@ section {
     color: white;
     text-transform: uppercase;
     margin: 0; }
-  .blog .hero .entry-title > a {
-    color: white;
-    font-size: 2rem;
-    text-decoration: none; }
+  .blog .hero .entry-title {
+    width: 85%; }
+    .blog .hero .entry-title a {
+      color: white;
+      font-size: 2rem;
+      text-decoration: none; }
   .blog .hero .white-btn {
     margin-top: .5rem; }
 
@@ -1454,7 +1484,9 @@ section {
     text-align: center; }
     @media (min-width: 1024px) {
       .blog .site-main section.posts {
-        width: 73%; } }
+        width: 73%;
+        border-right: 1px solid #f4f4f4;
+        padding: 0rem 5rem; } }
     .blog .site-main section.posts article {
       padding-bottom: 4rem;
       border-bottom: 1px solid #f3f3f3; }
@@ -1475,13 +1507,16 @@ section {
       .blog .site-main .sidebar {
         display: block;
         width: 27%;
-        padding-top: 3rem; } }
+        padding-top: 3rem;
+        padding-left: 2rem; } }
     .blog .site-main .sidebar .widget-title {
-      text-align: center; }
+      text-align: center;
+      margin: 1rem auto; }
     .blog .site-main .sidebar .wp-block-image img {
+      margin: 1rem auto;
       border-radius: 50%;
-      width: 250px;
-      height: 250px; }
+      width: 200px;
+      height: 200px; }
     .blog .site-main .sidebar .archive-title {
       text-align: center;
       color: #404040; }
@@ -1519,7 +1554,7 @@ section {
         position: absolute;
         color: #404040;
         z-index: 1;
-        min-width: 250px;
+        min-width: 238px;
         -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                 box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         margin: 0;
@@ -1540,17 +1575,41 @@ section {
 .single-post .site-content {
   margin-left: auto;
   margin-right: auto; }
+  .single-post .site-content .entry-meta {
+    text-align: center;
+    margin: 3rem auto;
+    margin-top: 4rem; }
   .single-post .site-content .entry-header {
-    text-align: center; }
+    width: 100vw;
+    height: 350px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 3rem; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .single-post .site-content .entry-header {
+        height: 400px; } }
+    @media (min-width: 1024px) {
+      .single-post .site-content .entry-header {
+        max-width: 1000px;
+        height: 500px; } }
   .single-post .site-content .entry-content {
     width: 80%;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-bottom: 5rem; }
+    @media (min-width: 1024px) {
+      .single-post .site-content .entry-content {
+        max-width: 650px; } }
 
 /* Project Archie Page */
 .post-type-archive-projects .project-header {
   text-align: center;
-  margin: 5rem 0;
+  margin: 6rem 0;
   font-size: 1.5rem; }
 
 .post-type-archive-projects .project-grid {
@@ -1561,7 +1620,7 @@ section {
   margin-right: auto;
   height: auto;
   grid-gap: 20px;
-  margin-bottom: 5rem; }
+  margin-bottom: 6rem; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .post-type-archive-projects .project-grid {
       width: 80%; } }
@@ -1596,8 +1655,10 @@ section {
         text-transform: uppercase;
         font-size: 1.5rem;
         margin: 0;
-        margin-top: -8rem;
-        border: 1px solid white; }
+        margin-top: -13rem;
+        border: 1px solid white;
+        background: #f4f4f4;
+        color: #404040; }
         @media (min-width: 768px) and (max-width: 1023px) {
           .post-type-archive-projects .project-grid .project-grid-item .project-info .project-title {
             font-size: 2rem; } }
@@ -1609,5 +1670,11 @@ section {
           .post-type-archive-projects .project-grid .project-grid-item .project-info .project-title:hover a, .post-type-archive-projects .project-grid .project-grid-item .project-info .project-title:focus a, .post-type-archive-projects .project-grid .project-grid-item .project-info .project-title:active a {
             color: #404040; }
         .post-type-archive-projects .project-grid .project-grid-item .project-info .project-title a {
-          color: white;
+          color: #404040;
           text-decoration: none; }
+    .post-type-archive-projects .project-grid .project-grid-item .white-btn {
+      background: #f4f4f4;
+      color: #404040 !important; }
+      .post-type-archive-projects .project-grid .project-grid-item .white-btn:hover, .post-type-archive-projects .project-grid .project-grid-item .white-btn:active, .post-type-archive-projects .project-grid .project-grid-item .white-btn:focus {
+        background: #404040;
+        color: #d2ab74 !important; }

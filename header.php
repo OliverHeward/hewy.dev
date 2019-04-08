@@ -92,11 +92,10 @@
 				</div>
 
 					<div class="header-social">
-							<i class="fab fa-linkedin-in"></i>
-							<i class="fab fa-github"></i>
-							<i class="fab fa-twitter"></i>
-							<i class="fab fa-instagram"></i>
-							<i class="fab fa-spotify"></i>
+						<a href="https://www.linkedin.com/in/oliver-heward">
+							<i class="fab fa-linkedin-in"></i> </a>
+						<a href="https://github.com/OliverHeward">
+							<i class="fab fa-github"></i></a>
 					</div>
 				</div> <!-- End of container -->
 			</header><!-- End of Site-Header -->
