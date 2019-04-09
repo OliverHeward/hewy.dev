@@ -40,12 +40,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $message_body .= "$key: $value\n";
         }
 
-        $to = 'oliverhewy@gmail.com';
+        $to = 'Oliver@hewy.dev';
         $subject = 'Contact Form Submit';
        	if (mail($to, $subject, $message)) {
        		$success = "Message sent, thank you for contacting us!";
        		$name = $email = $message = '';
-       		header('Location: front-page.php');
+       		header('Location: /hewy');
        	}
     }
 
@@ -57,5 +57,3 @@ function test_input($data) {
 	$data = htmlspecialchars($data);
 	return $data;
 }
-
-?>
