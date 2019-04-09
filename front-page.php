@@ -77,55 +77,55 @@ get_header(); ?>
 				<h1 class="entry-title">Experience</h1>
 				<div class="experience-grid">
 					<div class="container-skillbar">
-						<div class="skillbar clearfix " data-percent="70%">
+						<div class="skillbar clearfix " data-percent="90%">
 							<div class="skillbar-title"><span style="color: #DD1E2F;">HTML5</span></div>
 							<div class="skillbar-bar"></div>
-							<div class="skill-bar-percent">70%</div>
-						</div> <!-- Ende Skill Bar -->
+							<div class="skill-bar-percent">90%</div>
+						</div> <!-- End Skill Bar -->
 
-						<div class="skillbar clearfix " data-percent="65%">
+						<div class="skillbar clearfix " data-percent="90%">
 							<div class="skillbar-title"><span style="color: #EBB035;">CSS3</span></div>
 							<div class="skillbar-bar" style="background: #EBB035;"></div>
-							<div class="skill-bar-percent">65%</div>
-						</div> <!-- Ende Skill Bar -->
+							<div class="skill-bar-percent">90%</div>
+						</div> <!-- End Skill Bar -->
 
-						<div class="skillbar clearfix " data-percent="25%">
+						<div class="skillbar clearfix " data-percent="65%">
 							<div class="skillbar-title"><span style="color: #f7df1e;">JS</span></div>
 							<div class="skillbar-bar"></div>
-							<div class="skill-bar-percent">25%</div>
-						</div> <!-- Ende Skill Bar -->
+							<div class="skill-bar-percent">65%</div>
+						</div> <!-- End Skill Bar -->
 
 						<div class="skillbar clearfix " data-percent="80%">
 							<div class="skillbar-title"><span style="color: #4f5b93;">PHP</span></div>
 							<div class="skillbar-bar"></div>
 							<div class="skill-bar-percent">80%</div>
-						</div> <!-- Ende Skill Bar -->
+						</div> <!-- End Skill Bar -->
 					</div>
 					<div class="container-skillbar">
-						<div class="skillbar clearfix " data-percent="85%">
+						<div class="skillbar clearfix " data-percent="45%">
 							<div class="skillbar-title"><span style="color: #61dbfb;">ReactJS</span></div>
 							<div class="skillbar-bar"></div>
-							<div class="skill-bar-percent">85%</div>
-						</div> <!-- Ende Skill Bar -->
+							<div class="skill-bar-percent">45%</div>
+						</div> <!-- End Skill Bar -->
 
-						<div class="skillbar clearfix " data-percent="75%">
+						<div class="skillbar clearfix " data-percent="90%">
 							<div class="skillbar-title"><span style="color: #cd6799;">SASS</span></div>
 							<div class="skillbar-bar"></div>
-							<div class="skill-bar-percent">75%</div>
-						</div> <!-- Ende Skill Bar -->
+							<div class="skill-bar-percent">90%</div>
+						</div> <!-- End Skill Bar -->
 
 						<div class="skillbar clearfix " data-percent="75%">
 							<div class="skillbar-title"><span style="color: #FAA523;">jQuery</span></div>
 							<div class="skillbar-bar"></div>
 							<div class="skill-bar-percent">75%</div>
-						</div> <!-- Ende Skill Bar -->
+						</div> <!-- End Skill Bar -->
 
 						<div class="skillbar clearfix " data-percent="75%">
 							<div class="skillbar-title"><span style="color: #00749c;">WP</span></div>
 							<div class="skillbar-bar"></div>
 							<div class="skill-bar-percent">75%</div>
-						</div> <!-- Ende Skill Bar -->
-					</div><!-- Ende container Skill Bar -->
+						</div> <!-- End Skill Bar -->
+					</div><!-- End container Skill Bar -->
 				</div>
   			 
 			<!-- Start of Project Section -->
