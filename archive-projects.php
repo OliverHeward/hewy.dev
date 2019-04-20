@@ -37,7 +37,7 @@ get_header(); ?>
 						<!-- Start of Project Info calling Title wrapped in anchor and a button with link to post -->
 						<div class="project-info">
 							<?php the_title(sprintf('<h3 class="project-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>');?>
-                    		<?php echo '<a class="white-btn" href="'.get_the_permalink().'">View Site</a>'; ?>
+                    		<?php echo '<a href="'.get_the_permalink().'">View Site</a>'; ?>
                 		</div>
                 		<!-- ENd of Project Info -->
 					<!-- End of Grid Wrapper -->

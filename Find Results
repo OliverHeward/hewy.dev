@@ -1,0 +1,710 @@
+Searching 19841 files for "head()"
+
+/Applications/MAMP/htdocs/hewy/wp-content/plugins/akismet/class.akismet-admin.php:
+   99  	}
+  100  
+  101: 	public static function admin_head() {
+  102  		if ( !current_user_can( 'manage_options' ) )
+  103  			return;
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/header.php:
+   15  	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+   16  
+   17: 	<?php wp_head(); ?>
+   18  </head>
+   19  
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/acorn/dist/acorn.es.js:
+ 4079  };
+ 4080  pp$9.regexp_eatZero = function(state) {
+ 4081:   if (state.current() === 0x30 /* 0 */ && !isDecimalDigit(state.lookahead())) {
+ 4082      state.lastIntValue = 0;
+ 4083      state.advance();
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/acorn/dist/acorn.js:
+ 4085  };
+ 4086  pp$9.regexp_eatZero = function(state) {
+ 4087:   if (state.current() === 0x30 /* 0 */ && !isDecimalDigit(state.lookahead())) {
+ 4088      state.lastIntValue = 0;
+ 4089      state.advance();
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/ajv/dist/regenerator.min.js:
+    <binary>
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/babylon/lib/index.js:
+  717    // TODO
+  718  
+  719:   Tokenizer.prototype.lookahead = function lookahead() {
+  720      var old = this.state;
+  721      this.state = old.clone(true);
+  ...
+ 1871      case types._export:
+ 1872      case types._import:
+ 1873:       if (this.hasPlugin("dynamicImport") && this.lookahead().type === types.parenL) break;
+ 1874  
+ 1875        if (!this.options.allowImportExportEverywhere) {
+ ....
+ 2622      _specifier.exported = this.parseIdentifier(true);
+ 2623      node.specifiers = [this.finishNode(_specifier, "ExportDefaultSpecifier")];
+ 2624:     if (this.match(types.comma) && this.lookahead().type === types.star) {
+ 2625        this.expect(types.comma);
+ 2626        var _specifier2 = this.startNode();
+ ....
+ 2676    }
+ 2677  
+ 2678:   var lookahead = this.lookahead();
+ 2679    return lookahead.type === types.comma || lookahead.type === types.name && lookahead.value === "from";
+ 2680  };
+ ....
+ 4005          } else if (this.eat(types.braceR)) {
+ 4006            break;
+ 4007:         } else if (this.match(types.comma) && this.lookahead().type === types.braceR) {
+ 4008            // TODO: temporary rollback
+ 4009            // this.unexpected(position, "A trailing comma is not permitted after the rest element");
+ ....
+ 5081      return this.flowParseDeclareVariable(node);
+ 5082    } else if (this.isContextual("module")) {
+ 5083:     if (this.lookahead().type === types.dot) {
+ 5084        return this.flowParseDeclareModuleExports(node);
+ 5085      } else {
+ ....
+ 5135  
+ 5136      if (this.match(types._import)) {
+ 5137:       var lookahead = this.lookahead();
+ 5138        if (lookahead.value !== "type" && lookahead.value !== "typeof") {
+ 5139          this.unexpected(null, "Imports within a `declare module` body must always be `import type` or `import typeof`");
+ ....
+ 5359  
+ 5360    this.expect(types.bracketL);
+ 5361:   if (this.lookahead().type === types.colon) {
+ 5362      node.id = this.flowParseObjectPropertyKey();
+ 5363      node.key = this.flowParseTypeInitialiser();
+ ....
+ 5450      var startLoc = this.state.startLoc;
+ 5451      node = this.startNode();
+ 5452:     if (allowStatic && this.isContextual("static") && this.lookahead().type !== types.colon) {
+ 5453        this.next();
+ 5454        isStatic = true;
+ ....
+ 5572    var typeAnnotation = null;
+ 5573    var node = this.startNode();
+ 5574:   var lh = this.lookahead();
+ 5575    if (lh.type === types.colon || lh.type === types.question) {
+ 5576      name = this.parseIdentifier();
+ ....
+ 5689        if (!this.match(types.parenR) && !this.match(types.ellipsis)) {
+ 5690          if (this.match(types.name)) {
+ 5691:           var token = this.lookahead().type;
+ 5692            isGroupedType = token !== types.question && token !== types.colon;
+ 5693          } else {
+ ....
+ 5702  
+ 5703          // A `,` or a `) =>` means this is an anonymous function type
+ 5704:         if (this.state.noAnonFunctionType || !(this.match(types.comma) || this.match(types.parenR) && this.lookahead().type === types.arrow)) {
+ 5705            this.expect(types.parenR);
+ 5706            return type;
+ ....
+ 6301        }
+ 6302        if (kind) {
+ 6303:         var lh = this.lookahead();
+ 6304          if (lh.type === types.name && lh.value !== "from" || lh.type === types.braceL || lh.type === types.star) {
+ 6305            this.next();
+ ....
+ 7188  
+ 7189          case types.braceL:
+ 7190:           if (this.lookahead().type === types.ellipsis) {
+ 7191              children.push(this.jsxParseSpreadChild());
+ 7192            } else {
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/connect/HISTORY.md:
+ 1493  
+ 1494   * bump raw-body
+ 1495:  * errorHandler: use `res.setHeader()` instead of `res.writeHead()` #949 @lo1tuma
+ 1496  
+ 1497  2.11.0 / 2013-10-29
+ ....
+ 2152  
+ 2153    * Added `logger()` support for format function
+ 2154:   * Fixed `logger()` to support mess of writeHead()/progressive api for node 0.4.x
+ 2155  
+ 2156  1.1.3 / 2011-03-21
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/eslint/lib/code-path-analysis/fork-context.js:
+  117       * @type {CodePathSegment[]}
+  118       */
+  119:     get head() {
+  120          const list = this.segmentsList;
+  121  
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/eslint/node_modules/esprima/dist/esprima.js:
+ 2631  	        var expressions = [];
+ 2632  	        var quasis = [];
+ 2633: 	        var quasi = this.parseTemplateHead();
+ 2634  	        quasis.push(quasi);
+ 2635  	        while (!quasi.tail) {
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/fsevents/node_modules/needle/test/utils/test.js:
+   12  }
+   13  
+   14: function simple_head(){
+   15  	client.head('http://www.amazon.com', response_callback);
+   16  }
+   ..
+   75  switch(process.argv[2]){
+   76  	case 'head':
+   77: 		simple_head();
+   78  		break;
+   79  	case 'get':
+   ..
+   93  		break;
+   94  	case 'all':
+   95: 		simple_head();
+   96  		simple_get();
+   97  		auth_get();
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/lodash/chain.js:
+   26   *     return o.user + ' is ' + o.age;
+   27   *   })
+   28:  *   .head()
+   29   *   .value();
+   30   * // => 'pebbles is 1'
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/lodash/core.js:
+ 1738     *     return o.user + ' is ' + o.age;
+ 1739     *   })
+ 1740:    *   .head()
+ 1741     *   .value();
+ 1742     * // => 'pebbles is 1'
+ ....
+ 1819     *
+ 1820     * // A sequence without explicit chaining.
+ 1821:    * _(users).head();
+ 1822     * // => { 'user': 'barney', 'age': 36 }
+ 1823     *
+ ....
+ 1825     * _(users)
+ 1826     *   .chain()
+ 1827:    *   .head()
+ 1828     *   .pick('user')
+ 1829     *   .value();
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/lodash/lodash.js:
+ 8733       *     return o.user + ' is ' + o.age;
+ 8734       *   })
+ 8735:      *   .head()
+ 8736       *   .value();
+ 8737       * // => 'pebbles is 1'
+ ....
+ 8854       *
+ 8855       * // A sequence without explicit chaining.
+ 8856:      * _(users).head();
+ 8857       * // => { 'user': 'barney', 'age': 36 }
+ 8858       *
+ ....
+ 8860       * _(users)
+ 8861       *   .chain()
+ 8862:      *   .head()
+ 8863       *   .pick('user')
+ 8864       *   .value();
+ ....
+ 16926  
+ 16927      LazyWrapper.prototype.find = function(predicate) {
+ 16928:       return this.filter(predicate).head();
+ 16929      };
+ 16930  
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/lodash/lodash.min.js:
+  127  u.lastIndex=0;o=u.exec(f);)var c=o.index;r=r.slice(0,c===T?i:c)}}else n.indexOf(yr(u),i)!=i&&(u=r.lastIndexOf(u),-1<u&&(r=r.slice(0,u)));return r+e},An.unescape=function(n){return(n=Iu(n))&&G.test(n)?n.replace(V,tt):n},An.uniqueId=function(n){var t=++fi;return Iu(n)+t},An.upperCase=Tf,An.upperFirst=$f,An.each=nu,An.eachRight=tu,An.first=qe,Nu(An,function(){var n={};return mt(An,function(t,r){oi.call(An.prototype,r)||(n[r]=t)}),n}(),{chain:false}),An.VERSION="4.17.11",r("bind bindKey curry curryRight partial partialRight".split(" "),function(n){
+  128  An[n].placeholder=An}),r(["drop","take"],function(n,t){Ln.prototype[n]=function(r){r=r===T?1:Li(ku(r),0);var e=this.__filtered__&&!t?new Ln(this):this.clone();return e.__filtered__?e.__takeCount__=Ci(r,e.__takeCount__):e.__views__.push({size:Ci(r,4294967295),type:n+(0>e.__dir__?"Right":"")}),e},Ln.prototype[n+"Right"]=function(t){return this.reverse()[n](t).reverse()}}),r(["filter","map","takeWhile"],function(n,t){var r=t+1,e=1==r||3==r;Ln.prototype[n]=function(n){var t=this.clone();return t.__iteratees__.push({
+  129: iteratee:ye(n,3),type:r}),t.__filtered__=t.__filtered__||e,t}}),r(["head","last"],function(n,t){var r="take"+(t?"Right":"");Ln.prototype[n]=function(){return this[r](1).value()[0]}}),r(["initial","tail"],function(n,t){var r="drop"+(t?"":"Right");Ln.prototype[n]=function(){return this.__filtered__?new Ln(this):this[r](1)}}),Ln.prototype.compact=function(){return this.filter($u)},Ln.prototype.find=function(n){return this.filter(n).head()},Ln.prototype.findLast=function(n){return this.reverse().find(n);
+  130  },Ln.prototype.invokeMap=fr(function(n,t){return typeof n=="function"?new Ln(this):this.map(function(r){return Bt(r,n,t)})}),Ln.prototype.reject=function(n){return this.filter(au(ye(n)))},Ln.prototype.slice=function(n,t){n=ku(n);var r=this;return r.__filtered__&&(0<n||0>t)?new Ln(r):(0>n?r=r.takeRight(-n):n&&(r=r.drop(n)),t!==T&&(t=ku(t),r=0>t?r.dropRight(-t):r.take(t-n)),r)},Ln.prototype.takeRightWhile=function(n){return this.reverse().takeWhile(n).reverse()},Ln.prototype.toArray=function(){return this.take(4294967295);
+  131  },mt(Ln.prototype,function(n,t){var r=/^(?:filter|find|map|reject)|While$/.test(t),e=/^(?:head|last)$/.test(t),u=An[e?"take"+("last"==t?"Right":""):t],i=e||/^find/.test(t);u&&(An.prototype[t]=function(){var t=this.__wrapped__,o=e?[1]:arguments,f=t instanceof Ln,c=o[0],l=f||ff(t),s=function(n){return n=u.apply(An,a([n],o)),e&&h?n[0]:n};l&&r&&typeof c=="function"&&1!=c.length&&(f=l=false);var h=this.__chain__,p=!!this.__actions__.length,c=i&&!h,f=f&&!p;return!i&&l?(t=f?t:new Ln(this),t=n.apply(t,o),t.__actions__.push({
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/lodash/wrapperChain.js:
+   17   *
+   18   * // A sequence without explicit chaining.
+   19:  * _(users).head();
+   20   * // => { 'user': 'barney', 'age': 36 }
+   21   *
+   ..
+   23   * _(users)
+   24   *   .chain()
+   25:  *   .head()
+   26   *   .pick('user')
+   27   *   .value();
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/ast.cpp:
+  185    bool Complex_Selector::has_parent_ref() const
+  186    {
+  187:     return (head() && head()->has_parent_ref()) ||
+  188             (tail() && tail()->has_parent_ref());
+  189    }
+  ...
+  191    bool Complex_Selector::has_real_parent_ref() const
+  192    {
+  193:     return (head() && head()->has_real_parent_ref()) ||
+  194             (tail() && tail()->has_real_parent_ref());
+  195    }
+  ...
+  202      Compound_Selector_Ptr l_h = NULL;
+  203      Compound_Selector_Ptr r_h = NULL;
+  204:     if (l) l_h = l->head();
+  205:     if (r) r_h = r->head();
+  206      // process all tails
+  207      while (true)
+  ...
+  213          l_h = NULL;
+  214          l = l->tail();
+  215:         if(l) l_h = l->head();
+  216          continue;
+  217        }
+  ...
+  221          r_h = NULL;
+  222          r = r->tail();
+  223:         if (r) r_h = r->head();
+  224          continue;
+  225        }
+  ...
+  239          // fetch the next headers
+  240          l_h = NULL; r_h = NULL;
+  241:         if (l) l_h = l->head();
+  242:         if (r) r_h = r->head();
+  243        }
+  244        // one side is null
+  ...
+  256          // fetch the next headers
+  257          l_h = NULL; r_h = NULL;
+  258:         if (l) l_h = l->head();
+  259:         if (r) r_h = r->head();
+  260        }
+  261        // heads are not equal
+  ...
+  271      Compound_Selector_Ptr l_h = NULL;
+  272      Compound_Selector_Ptr r_h = NULL;
+  273:     if (l) l_h = l->head();
+  274:     if (r) r_h = r->head();
+  275      // process all tails
+  276      while (true)
+  ...
+  282          l_h = NULL;
+  283          l = l->tail();
+  284:         if (l) l_h = l->head();
+  285          continue;
+  286        }
+  ...
+  290          r_h = NULL;
+  291          r = r->tail();
+  292:         if (r) r_h = r->head();
+  293          continue;
+  294        }
+  ...
+  308          // fetch the next heads
+  309          l_h = NULL; r_h = NULL;
+  310:         if (l) l_h = l->head();
+  311:         if (r) r_h = r->head();
+  312        }
+  313        // equals if other head is empty
+  ...
+  325          // fetch the next heads
+  326          l_h = NULL; r_h = NULL;
+  327:         if (l) l_h = l->head();
+  328:         if (r) r_h = r->head();
+  329        }
+  330        // abort
+  ...
+  852    bool Compound_Selector::is_superselector_of(Complex_Selector_Obj rhs, std::string wrapped)
+  853    {
+  854:     if (rhs->head()) return is_superselector_of(rhs->head(), wrapped);
+  855      return false;
+  856    }
+  ...
+  999  
+ 1000      // get the headers for the last tails
+ 1001:     Compound_Selector_Obj l_last_head = l_last->head();
+ 1002:     Compound_Selector_Obj r_last_head = r_last->head();
+ 1003  
+ 1004      // check valid head pointers (assertion)
+ ....
+ 1083    bool Complex_Selector::is_superselector_of(Compound_Selector_Obj rhs, std::string wrapping)
+ 1084    {
+ 1085:     return last()->head() && last()->head()->is_superselector_of(rhs, wrapping);
+ 1086    }
+ 1087  
+ ....
+ 1090      Complex_Selector_Ptr lhs = this;
+ 1091      // check for selectors with leading or trailing combinators
+ 1092:     if (!lhs->head() || !rhs->head())
+ 1093      { return false; }
+ 1094      Complex_Selector_Obj l_innermost = lhs->innermost();
+ ....
+ 1104  
+ 1105      if (l_len == 1)
+ 1106:     { return lhs->head()->is_superselector_of(rhs->last()->head(), wrapping); }
+ 1107  
+ 1108      // we have to look one tail deeper, since we cary the
+ ....
+ 1112        Complex_Selector_Obj rhs_tail = rhs->tail();
+ 1113        if (lhs_tail->combinator() != rhs_tail->combinator()) return false;
+ 1114:       if (lhs_tail->head() && !rhs_tail->head()) return false;
+ 1115:       if (!lhs_tail->head() && rhs_tail->head()) return false;
+ 1116:       if (lhs_tail->head() && rhs_tail->head()) {
+ 1117:         if (!lhs_tail->head()->is_superselector_of(rhs_tail->head())) return false;
+ 1118        }
+ 1119      }
+ ....
+ 1124        if (i == L-1)
+ 1125        { return false; }
+ 1126:       if (lhs->head() && marker->head() && lhs->head()->is_superselector_of(marker->head(), wrapping))
+ 1127        { found = true; break; }
+ 1128        marker = marker->tail();
+ ....
+ 1178      Combinator c = ss->combinator();
+ 1179      String_Obj r = ss->reference();
+ 1180:     Compound_Selector_Obj h = ss->head();
+ 1181  
+ 1182      if (ss->has_line_feed()) has_line_feed(true);
+ ....
+ 1189          throw Exception::InvalidParent(this, traces, ss);
+ 1190        } else if (last()->head_ && last()->head_->length()) {
+ 1191:         Compound_Selector_Obj rh = last()->head();
+ 1192          size_t i;
+ 1193          size_t L = h->length();
+ ....
+ 1277    {
+ 1278      Complex_Selector_Obj tail = this->tail();
+ 1279:     Compound_Selector_Obj head = this->head();
+ 1280      Selector_List_Ptr parents = pstack.back();
+ 1281  
+ ....
+ 1384                cpy->tail(SASS_MEMORY_CLONE(tails->at(n)));
+ 1385                cpy->head(SASS_MEMORY_NEW(Compound_Selector, head->pstate()));
+ 1386:               for (size_t i = 1, L = this->head()->length(); i < L; ++i)
+ 1387:                 cpy->head()->append((*this->head())[i]);
+ 1388:               if (!cpy->head()->length()) cpy->head(0);
+ 1389                retval->append(cpy->skip_empty_reference());
+ 1390              }
+ ....
+ 1394              Complex_Selector_Obj cpy = SASS_MEMORY_CLONE(this);
+ 1395              cpy->head(SASS_MEMORY_NEW(Compound_Selector, head->pstate()));
+ 1396:             for (size_t i = 1, L = this->head()->length(); i < L; ++i)
+ 1397:               cpy->head()->append((*this->head())[i]);
+ 1398:             if (!cpy->head()->length()) cpy->head(0);
+ 1399              retval->append(cpy->skip_empty_reference());
+ 1400            }
+ ....
+ 1492    void Complex_Selector::cloneChildren()
+ 1493    {
+ 1494:     if (head()) head(SASS_MEMORY_CLONE(head()));
+ 1495      if (tail()) tail(SASS_MEMORY_CLONE(tail()));
+ 1496    }
+ ....
+ 1521      // Check every rhs selector against left hand list
+ 1522      for(size_t i = 0, L = length(); i < L; ++i) {
+ 1523:       if (!(*this)[i]->head()) continue;
+ 1524:       if ((*this)[i]->head()->is_empty_reference()) {
+ 1525          // simply move to the next tail if we have "no" combinator
+ 1526          if ((*this)[i]->combinator() == Complex_Selector::ANCESTOR_OF) {
+ ....
+ 1534          // otherwise remove the first item from head
+ 1535          else {
+ 1536:           (*this)[i]->head()->erase((*this)[i]->head()->begin());
+ 1537          }
+ 1538        }
+ ....
+ 1680  
+ 1681        // Ignore any parent selectors, until we find the first non Selectorerence head
+ 1682:       Compound_Selector_Obj compound_sel = c->head();
+ 1683        Complex_Selector_Obj pIter = complex_sel;
+ 1684        while (pIter) {
+ 1685:         Compound_Selector_Obj pHead = pIter->head();
+ 1686          if (pHead && Cast<Parent_Selector>(pHead->elements()[0]) == NULL) {
+ 1687            compound_sel = pHead;
+ ....
+ 1692        }
+ 1693  
+ 1694:       if (!pIter->head() || pIter->tail()) {
+ 1695          coreError("nested selectors may not be extended", c->pstate());
+ 1696        }
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/ast.hpp:
+ 2807    public:
+ 2808      bool contains_placeholder() {
+ 2809:       if (head() && head()->contains_placeholder()) return true;
+ 2810        if (tail() && tail()->contains_placeholder()) return true;
+ 2811        return false;
+ ....
+ 2846      bool is_empty_ancestor() const
+ 2847      {
+ 2848:       return (!head() || head()->length() == 0) &&
+ 2849               combinator() == Combinator::ANCESTOR_OF;
+ 2850      }
+ ....
+ 2883      {
+ 2884        int sum = 0;
+ 2885:       if (head()) sum += head()->specificity();
+ 2886        if (tail()) sum += tail()->specificity();
+ 2887        return sum;
+ ....
+ 2911        ComplexSelectorSet srcs;
+ 2912  
+ 2913:       Compound_Selector_Obj pHead = head();
+ 2914        Complex_Selector_Obj  pTail = tail();
+ 2915  
+ ....
+ 2930        Complex_Selector_Ptr pIter = this;
+ 2931        while (pIter) {
+ 2932:         Compound_Selector_Ptr pHead = pIter->head();
+ 2933  
+ 2934          if (pHead) {
+ ....
+ 2942        Complex_Selector_Ptr pIter = this;
+ 2943        while (pIter) {
+ 2944:         Compound_Selector_Ptr pHead = pIter->head();
+ 2945  
+ 2946          if (pHead) {
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/debugger.hpp:
+  147        // if (del = "/") del += selector->reference()->perform(&to_string) + "/";
+  148      std::cerr << " <" << prettyprint(selector->pstate().token.ws_before()) << ">" << std::endl;
+  149:     debug_ast(selector->head(), ind + " " /* + "[" + del + "]" */, env);
+  150      if (selector->tail()) {
+  151        debug_ast(selector->tail(), ind + "{" + del + "}", env);
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/eval.cpp:
+ 1555        Complex_Selector_Ptr is = resolved->at(i)->first();
+ 1556        while (is) {
+ 1557:         if (is->head()) {
+ 1558:           is->head(operator()(is->head()));
+ 1559          }
+ 1560          is = is->tail();
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/expand.cpp:
+  114            Complex_Selector_Ptr tail = complex_selector;
+  115            while (tail) {
+  116:             if (tail->head()) for (Simple_Selector_Obj header : tail->head()->elements()) {
+  117                Parent_Selector_Ptr ptr = Cast<Parent_Selector>(header);
+  118                if (ptr == NULL || (!ptr->real() || has_parent_selector)) continue;
+  ...
+  594          Complex_Selector_Obj tail = complex_selector;
+  595          while (tail) {
+  596:           if (tail->head()) for (Simple_Selector_Obj header : tail->head()->elements()) {
+  597              if (Cast<Parent_Selector>(header) == NULL) continue; // skip all others
+  598              std::string sel_str(complex_selector->to_string(ctx.c_options));
+  ...
+  609      for (auto complex_sel : contextualized->elements()) {
+  610        Complex_Selector_Obj c = complex_sel;
+  611:       if (!c->head() || c->tail()) {
+  612          std::string sel_str(contextualized->to_string(ctx.c_options));
+  613          error("Can't extend " + sel_str + ": can't extend nested selectors", c->pstate(), traces);
+  614        }
+  615:       Compound_Selector_Obj target = c->head();
+  616        if (contextualized->is_optional()) target->is_optional(true);
+  617        for (size_t i = 0, L = extender->length(); i < L; ++i) {
+  618          Complex_Selector_Obj sel = (*extender)[i];
+  619:         if (!(sel->head() && sel->head()->length() > 0 &&
+  620:             Cast<Parent_Selector>((*sel->head())[0])))
+  621          {
+  622            Compound_Selector_Obj hh = SASS_MEMORY_NEW(Compound_Selector, (*extender)[i]->pstate());
+  ...
+  659        }
+  660        for (Complex_Selector_Obj cs : sl->elements()) {
+  661:         if (!cs.isNull() && !cs->head().isNull()) {
+  662:           cs->head()->media_block(media_block_stack.back());
+  663          }
+  664        }
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/extend.cpp:
+  149        first = false;
+  150  
+  151:       if (pIter->head()) {
+  152:         os << pIter->head()->to_string();
+  153        } else {
+  154          os << "NULL_HEAD";
+  ...
+  978            Complex_Selector_Obj pMergedWrapper = SASS_MEMORY_CLONE(sel1.selector()); // Clone the Complex_Selector to get back to something we can transform to a node once we replace the head with the unification result
+  979            // TODO: does subject matter? Ruby: return unless merged = sel1.unify(sel2.members, sel2.subject?)
+  980:           Compound_Selector_Ptr pMerged = sel1.selector()->head()->unify_with(sel2.selector()->head());
+  981            pMergedWrapper->head(pMerged);
+  982  
+  ...
+ 1035              Complex_Selector_Obj pMergedWrapper = SASS_MEMORY_CLONE(plusSel.selector()); // Clone the Complex_Selector to get back to something we can transform to a node once we replace the head with the unification result
+ 1036              // TODO: does subject matter? Ruby: merged = plus_sel.unify(tilde_sel.members, tilde_sel.subject?)
+ 1037:             Compound_Selector_Ptr pMerged = plusSel.selector()->head()->unify_with(tildeSel.selector()->head());
+ 1038              pMergedWrapper->head(pMerged);
+ 1039  
+ ....
+ 1084          Complex_Selector_Obj pMergedWrapper = SASS_MEMORY_CLONE(sel1.selector()); // Clone the Complex_Selector to get back to something we can transform to a node once we replace the head with the unification result
+ 1085          // TODO: does subject matter? Ruby: return unless merged = sel1.unify(sel2.members, sel2.subject?)
+ 1086:         Compound_Selector_Ptr pMerged = sel1.selector()->head()->unify_with(sel2.selector()->head());
+ 1087          pMergedWrapper->head(pMerged);
+ 1088  
+ ....
+ 1571        DEBUG_EXEC(EXTEND_COMPOUND, printCompoundSelector(pSelectorWithoutExtendSelectors, "SELF_WO_SEL: "))
+ 1572  
+ 1573:       Compound_Selector_Obj pInnermostCompoundSelector = pExtComplexSelector->last()->head();
+ 1574  
+ 1575        if (!pInnermostCompoundSelector) {
+ ....
+ 1693  
+ 1694      while (!hasExtension && pIter) {
+ 1695:       Compound_Selector_Obj pHead = pIter->head();
+ 1696  
+ 1697        if (pHead) {
+ ....
+ 1779        // verified now that node is a valid selector
+ 1780        Complex_Selector_Obj sseqSel = sseqOrOp.selector();
+ 1781:       Compound_Selector_Obj sseqHead = sseqSel->head();
+ 1782  
+ 1783        // let EXTENDED be extend_compound(COMPOUND, SEEN)
+ ....
+ 1932        while (cur) {
+ 1933          // process header
+ 1934:         if (cur->head() && seen.find(cur->head()) == seen.end()) {
+ 1935            CompoundSelectorSet recseen(seen);
+ 1936:           recseen.insert(cur->head());
+ 1937            // create a copy since we add multiple items if stuff get unwrapped
+ 1938            Compound_Selector_Obj cpy_head = SASS_MEMORY_NEW(Compound_Selector, cur->pstate());
+ 1939:           for (Simple_Selector_Obj hs : *cur->head()) {
+ 1940              if (Wrapped_Selector_Obj ws = Cast<Wrapped_Selector>(hs)) {
+ 1941                ws->selector(SASS_MEMORY_CLONE(ws->selector()));
+ ....
+ 1958                        // remove parent selectors from inner selector
+ 1959                        Compound_Selector_Obj ext_head = NULL;
+ 1960:                       if (ext_cs->first()) ext_head = ext_cs->first()->head();
+ 1961                        if (ext_head && ext_head && ext_head->length() > 0) {
+ 1962                          cpy_ws_sl->append(ext_cs->first());
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/functions.cpp:
+  265        if (sel_list->length() == 0) return NULL;
+  266        Complex_Selector_Obj first = sel_list->first();
+  267:       if (!first->tail()) return first->head();
+  268:       return first->tail()->head();
+  269      }
+  270  
+  ...
+ 2066  
+ 2067              // Cannot be a Universal selector
+ 2068:             Element_Selector_Obj pType = Cast<Element_Selector>(childSeq->head()->first());
+ 2069              if(pType && pType->name() == "*") {
+ 2070                std::string msg("Can't append \"");
+ ....
+ 2079  
+ 2080              // append any selectors in childSeq's head
+ 2081:             parentSeqClone->innermost()->head()->concat(base->head());
+ 2082  
+ 2083              // Set parentSeqClone new tail
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/inspect.cpp:
+ 1020    void Inspect::operator()(Complex_Selector_Ptr c)
+ 1021    {
+ 1022:     Compound_Selector_Obj      head = c->head();
+ 1023      Complex_Selector_Obj            tail = c->tail();
+ 1024      Complex_Selector::Combinator comb = c->combinator();
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/listize.cpp:
+   40      List_Obj l = SASS_MEMORY_NEW(List, sel->pstate(), 2);
+   41      l->from_selector(true);
+   42:     Compound_Selector_Obj head = sel->head();
+   43      if (head && !head->is_empty_reference())
+   44      {
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/node.cpp:
+  149      } else if (node.isSelector()){
+  150  
+  151:       os << node.selector()->head()->to_string();
+  152  
+  153      } else if (node.isCollection()) {
+  ...
+  182  
+  183      // unwrap the selector from parent ref
+  184:     if (pToConvert->head() && pToConvert->head()->has_parent_ref()) {
+  185        Complex_Selector_Obj tail = pToConvert->tail();
+  186        if (tail) tail->has_line_feed(pToConvert->has_line_feed());
+  ...
+  190      while (pToConvert) {
+  191  
+  192:       bool empty_parent_ref = pToConvert->head() && pToConvert->head()->is_empty_reference();
+  193  
+  194        // the first Complex_Selector may contain a dummy head pointer, skip it.
+  195:       if (pToConvert->head() && !empty_parent_ref) {
+  196          node.collection()->push_back(Node::createSelector(*pToConvert));
+  197          if (has_lf) node.collection()->back().got_line_feed = has_lf;
+  198:         if (pToConvert->head() || empty_parent_ref) {
+  199            if (pToConvert->tail()) {
+  200              pToConvert->tail()->has_line_feed(pToConvert->has_line_feed());
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/parser.cpp:
+  778        head->append(parent);
+  779        // selector may not have any head yet
+  780:       if (!sel->head()) { sel->head(head); }
+  781        // otherwise we need to create a new complex selector and set the old one as its tail
+  782        else {
+  ...
+ 2781    {
+ 2782      // init result struct
+ 2783:     Lookahead rv = Lookahead();
+ 2784      // get start position
+ 2785      const char* p = start ? start : position;
+ ....
+ 2855    {
+ 2856      // init result struct
+ 2857:     Lookahead rv = Lookahead();
+ 2858      // get start position
+ 2859      const char* p = start ? start : position;
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/node-sass/src/libsass/src/remove_placeholders.cpp:
+   42            for (Complex_Selector_Obj cs : sl->elements()) {
+   43              while (cs) {
+   44:               if (cs->head()) {
+   45:                 for (Simple_Selector_Obj& ss : cs->head()->elements()) {
+   46                    if (Wrapped_Selector_Ptr ws = Cast<Wrapped_Selector>(ss)) {
+   47                      if (Selector_List_Ptr wsl = Cast<Selector_List>(ws->selector())) {
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/regjsparser/parser.js:
+  161          var second;
+  162          if (_char.length === 1 && first >= 0xD800 && first <= 0xDBFF) {
+  163:           second = lookahead().charCodeAt(0);
+  164            if (second >= 0xDC00 && second <= 0xDFFF) {
+  165              // Unicode surrogate pair
+  ...
+  320      }
+  321  
+  322:     function lookahead() {
+  323        return str[pos];
+  324      }
+  ...
+  743        var tmp;
+  744  
+  745:       if (!isIdentifierPart(lookahead())) {
+  746          tmp = incr();
+  747          return createEscaped('identifier', tmp.charCodeAt(0), tmp, 1);
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/hewy-starter/node_modules/request/README.md:
+  901  - *request.patch()*: Defaults to `method: "PATCH"`.
+  902  - *request.del() / request.delete()*: Defaults to `method: "DELETE"`.
+  903: - *request.head()*: Defaults to `method: "HEAD"`.
+  904  - *request.options()*: Defaults to `method: "OPTIONS"`.
+  905  
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/twentynineteen/header.php:
+   17  	<meta name="viewport" content="width=device-width, initial-scale=1" />
+   18  	<link rel="profile" href="https://gmpg.org/xfn/11" />
+   19: 	<?php wp_head(); ?>
+   20  </head>
+   21  
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/twentyseventeen/header.php:
+   20  <link rel="profile" href="http://gmpg.org/xfn/11">
+   21  
+   22: <?php wp_head(); ?>
+   23  </head>
+   24  
+
+/Applications/MAMP/htdocs/hewy/wp-content/themes/twentysixteen/header.php:
+   19  	<link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>">
+   20  	<?php endif; ?>
+   21: 	<?php wp_head(); ?>
+   22  </head>
+   23  
+
+177 matches across 32 files

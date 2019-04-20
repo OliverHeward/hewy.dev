@@ -254,8 +254,8 @@ section {
             grid-auto-rows: 2fr;
             grid-gap: 20px;
             list-style-type: none;
-            margin-left: 0;
-            padding-left: 0;
+            @include margin-center;
+            padding: 0;
             width: 100vw;
             margin-bottom: 20px;
 
@@ -270,29 +270,47 @@ section {
                 overflow: hidden;
                 width: 90%;
                 margin: 0 auto;
-                max-width: 550px;
-            }
 
-            .project-wrapper {
-                max-width: 550px;
-                height: 300px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: transparent;
-
-                &:hover,
-                &:focus,
-                &:active {
-                    background: #f4f4f4 !important;
-                    color: $color__text-main;
+                .project-wrapper {
+                    max-width: 550px;
+                    height: 300px;
                     cursor: pointer;
-                    text-decoration: line-through $color__link;
                     transition: all 1s ease;
-                }
+                    @include margin-center;
 
-                .project-title {
-                    padding: 0;
+                    .project-hover {
+                        display: flex;
+                        justify-content: center;
+                        flex-flow: column wrap;
+                        align-items: center;
+                        background: #f4f4f4 !important;
+                        color: $color__text-main;
+                        height: inherit;
+
+                        .project-title {
+                            padding: 0;
+                            text-decoration: underline $color__link;
+                        }
+
+                        .project-bio {
+                            color: $color__text-main;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: $color__text-main;
+
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                border-left: 1px solid $color__link;
+                                border-right: 1px solid $color__link;
+                                padding: 0 1rem;
+                                transition: all .3s ease;
+                                color: $color__link;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -378,6 +396,76 @@ section {
         .follow-me {
             h2 {
                 text-align: center;
+            }
+        }
+    }
+}
+
+
+/* Single Projects Page */
+
+.single-projects {
+
+    .entry-meta {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        .entry-title { 
+            font-size: 1.75rem;
+
+            @include tablet {
+                font-size: 2.25rem;
+            }
+
+            @include desktop {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .entry-header {
+        height: 60vh;
+        width: 100vw;
+
+        @include desktop {
+            max-width: 1000px;
+            @include margin-center;
+        }
+    }
+
+    .entry-content {
+        width: 80%;
+        @include margin-center;
+        margin-top: 3rem;
+
+        @include desktop {
+            max-width: 750px;
+        }
+    }
+
+    .site-link {
+        width: 80%;
+        @include margin-center;
+        text-align: center;
+        margin-bottom: 3rem;
+
+        @include desktop {
+            max-width: 750px;
+        }
+        a {
+            color: $color__text-main;
+            text-decoration: none;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $color__link;
+                border-left: 1px solid $color__link;
+                border-right: 1px solid $color__link;
+                padding-right: 1rem;
+                padding-left: 1rem;
+
+                transition: all .3s ease;
             }
         }
     }

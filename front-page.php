@@ -144,12 +144,15 @@ get_header(); ?>
 					);
 					foreach($posts_array as $post) {?>
 						<!-- Start of List Items -->
-						<li>
+						<li class="project-grid-item">
 
 							<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 							<!-- Start of Project Wrapper w/ PHP Conditional for IF Post has Thumbnail -->
 							<div class="project-wrapper" style="background-image: url('<?php echo $thumb['0'];?>'); background-size: cover; background-position: center;">
-								<h1 class="project-title"><?php echo the_title();?></h1>
+								<div class="project-hover">
+									<h1 class="project-title"><?php echo the_title();?></h1>
+									<a href="<?php echo the_permalink();?>">View site</a>
+								</div>
 							</div>
 							<!-- End of Project Wrapper & Conditional -->
 						</li>
